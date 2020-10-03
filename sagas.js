@@ -1,4 +1,4 @@
-import { put, takeEvery } from "redux-saga/effects";
+import { all, put, takeEvery } from "redux-saga/effects";
 
 export function* helloSaga() {
   console.log("Hello Saga!");
@@ -12,4 +12,8 @@ export function* incrementAsync() {
 
 export function* watchIncrementAsync() {
   yield takeEvery("INCREMENT_ASYNC", incrementAsync);
+}
+
+export default function* rootSaga() {
+  yield all([helloSaga(), watchIncrementAsync()]);
 }
