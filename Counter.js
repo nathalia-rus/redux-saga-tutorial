@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from "react";
 
 const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync }) => (
   <div>
+    <h1> hello </h1>
     <button onClick={onIncrementAsync}>Increment after 1 second</button>
 
     <button onClick={onIncrement}>Increment</button>
